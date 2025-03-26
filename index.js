@@ -9,7 +9,7 @@ fnServer.use(express.json())
 fnServer.use(cors())
 fnServer.use(router)
 
-const port = 3000 || process.env.port
+const port = 3000 || process.env.PORT
 
 fnServer.listen(port,()=>{
     console.log(`port running at ${port} successfully`);
