@@ -7,6 +7,9 @@ require('./DB/connection')
 const fnServer = express()
 fnServer.use(express.json())
 fnServer.use(cors())
+const path = require('path');
+fnServer.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 fnServer.use(router)
 
 const port = 3000 || process.env.PORT
@@ -20,6 +23,6 @@ fnServer.get('/',(req,res)=>{
     
 })
 
-router.use('/uploads', express.static('uploads'));
+// router.use('/uploads', express.static('uploads'));
 
 

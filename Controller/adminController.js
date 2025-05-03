@@ -223,7 +223,6 @@ exports.getAdminProfile = async (req, res) => {
   try {
       const adminId = req.params.id || req.body.adminId;
 
-
     // Find the admin by ID
     const admin = await Admin.findById(adminId);
     console.log("admin at backenddd:",admin);

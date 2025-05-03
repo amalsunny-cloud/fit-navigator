@@ -477,7 +477,7 @@ exports.getUserProfile = async (req, res) => {
     res.status(200).json({
       username: user.username,
       purpose: user.purpose,
-      profileImage: user.profileImage, // Send the current profile image URL
+      profileImage: user.profileImage, 
     });
   } catch (error) {
     console.error(error);
